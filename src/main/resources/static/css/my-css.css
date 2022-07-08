@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+body {
+	background-color: green;
+}
+
+.main {
+	background-color: red;
+	padding: 40px;
+}
+
+img {
+	margin: 10px;
+	height: 300px;
+	width: 300px;
+	border-radius: 300px;
+}
+
+#print{
+	font-size: 30px;
+}

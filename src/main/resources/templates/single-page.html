@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>My Web Site</title>
+	</head>
+	
+	<body>
+		<!-- Footer Part 1-->
+		<footer id="fragment-footer" th:fragment="footer1">
+			<h1>This a Footer part 1 of my site</h1>
+			<a href="https://www.google.com/">Go to Google</a>
+			<h2>If you have some query in java then contact directly</h2>
+		</footer>
+		
+		<!-- Footer Part 2-->
+		<footer id="fragment-footer" th:fragment="footer1">
+			<h1>This a Footer part 2 of my site</h1>
+			<table border="1" style="border-collapse: collapse;">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Name</th>
+					</tr>
+				</thead>
+				
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Ketul</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Jal</td>
+					</tr>
+				</tbody>
+				
+				<tfoot>
+					<tr>
+						<th>ID</th>
+						<th>Name</th>
+					</tr>
+				</tfoot>
+			</table>
+		</footer>
+	
+		<!-- Footer Part 3-->
+		<footer id="fragment-footer" th:fragment="footer2(name, today)">
+			<h1>I'm Dynamic fragment</h1>
+			<h1 th:text="'Your Name is ' + ${name}"></h1>
+			<h2 th:text="${today}"></h2>
+		</footer>
+	</body>
+</html>

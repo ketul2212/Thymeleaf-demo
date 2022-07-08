@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>about</title>
+	</head>
+	<body>
+		<h1>Hello, I'm About</h1>
+	
+		<!-- get dynamic fields -->
+		<h1 th:text="${name}"></h1>
+		<h1 th:text="${day}"></h1>
+	
+		<!-- get dynamic name with some text -->
+		<h1>My name is <span th:text="${name}"></span></h1>
+		<h1 th:text="'Today`s date is ' + ${day}"></h1>
+	
+		<!-- create local variables -->
+		<div th:with="a = 5, b = 10, c = 'Jal', n = ${name}">
+			<h2 th:text="${a} + ' ' + ${c}"></h2>
+			<h2 th:text="'Sum of (' + ${a} + ' + ' + ${b} + ') is ' + ${a + b}"></h2>
+			<h2>Print Name inside div local variable <span th:text="${n}"></span></h2>
+		</div>
+	
+		<!-- print local variable of div tag outside div tag -->
+		<h2>Print Name inside div local variable <span th:text="${n}"></span></h2>
+
+		<!-- String Operation -->
+		<h1>Upper case : <span th:text="${#strings.toUpperCase(name)}"></span></h1>
+		<h1>Lower case : <span th:text="${#strings.toLowerCase(name)}"></span> </h1>
+		<h1>Length : <span th:text="${#strings.length(name)}">Helo</span></h1>
+		<h1>Length : <span th:text="${#strings.concat(name)}"></span></h1>
+		<!-- <h1>Is empty or not : <span th:text="${#strings.append()}"></span> </h1> -->
+	
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Iterator File</title>
+	</head>
+	
+	<body>
+		<h1>Iterate Java Collection, Array</h1>
+	
+		<!-- Print list as it is -->
+		<h1 th:text="${names}"></h1>
+	
+		<!-- Print Each name inside names list -->
+		<ul>
+				<li th:each="name : ${names}">
+					<span th:text="${name}"></span>
+				</li>
+		</ul>
+	
+		<!-- Print Each name with some additional functionality -->
+		<!-- 
+			status variable:-
+			------------------
+				-> Thymeleaf also enables a useful mechanism to keep track of the 
+				   iteration process via the status variable.
+				-> The status variable provides the following properties:
+					1.) index: the current iteration index, starting with 0 (zero)
+					2.) count: the number of elements processed so far
+					3.) size: the total number of elements in the list
+					4.) even/odd: checks if the current iteration index is even or odd
+					5.) first:  checks if the current iteration is the first one
+					6.) last: checks if the current iteration is the last one
+		 -->
+		<p th:each="name, status : ${names}">
+			<span th:text="${status.index}"></span>
+			<span th:text="${name}"></span><br/>
+		</p>
+		<br/>
+	
+		<!-- Print Each name with some style -->
+		<p th:each="name, status : ${names}">
+			<span th:style="${status.odd} ? 'color: red' : 'color: blue'" th:text="${status.index + 1} + ' ' + ${name}"></span><br/>
+		</p>
+
+	</body>
+</html>

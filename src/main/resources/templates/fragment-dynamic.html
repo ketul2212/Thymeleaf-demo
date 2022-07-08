@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Fragment With Dynamic Values</title>
+	</head>
+	<body>
+		<div id="host" th:include="single-page::footer2(${name}, ${today})"></div>
+	</body>
+</html>

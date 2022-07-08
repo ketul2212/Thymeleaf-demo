@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>User Print</title>
+	</head>
+	
+	<body>
+		<!-- Print User Object -->
+		<h1 th:text="${user}"></h1>
+		
+		<!-- Print User Info line by line -->
+		<h3 th:text="${user.name}"></h3>
+		<h3 th:text="${user.email}"></h3>
+	</body>
+</html>

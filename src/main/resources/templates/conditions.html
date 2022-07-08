@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+    	<title>Conditions</title>
+	</head>
+	
+	<body>
+
+		<!-- Conditional Operator with boolean value -->
+    	<h1 th:text="${isActive} ? 'User is active' : 'User is inactive'"></h1>
+    
+    	<!-- Conditional Operator with int value -->
+    	<h1 th:text="${num1} == 5 ? 'num1 is 5' : 'num1 is not 5'"></h1>
+    
+    	<!-- if-unless -->
+    	<h1 th:if="${gender} == 'Male'">Male</h1>
+    	<h1 th:unless="${gender} == 'Male'">Female</h1>
+ 
+ 		<!-- switch case -->
+ 		<div th:switch="${#lists.size(list)}">
+ 			<h1 th:case="'0'">List contain zero value</h1>
+ 			<h1 th:case="'1'">List contain one Value</h1>
+ 			<h1 th:case="*">List contain more than one element</h1>
+ 		</div>
+	</body>
+</html>

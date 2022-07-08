@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>css-js-image with Thymeleaf</title>
+		
+		<link rel="stylesheet" th:href="@{css/my-css.css}">
+		
+		<script th:src="@{js/my-js.js}"></script>
+	</head>
+	
+	<body>
+		<div class="main">
+			<h1>This is a heading to apply CSS, JS and image with Thymeleaf.</h1>
+			<p>
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+				Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+				when an unknown printer took a galley of type and scrambled it to make a type 
+				specimen book. It has survived not only five centuries, but also the leap into 
+				electronic typesetting, remaining essentially unchanged.It was popularised in 
+				the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+				and more recently with desktop publishing software like Aldus PageMaker 
+				including versions of Lorem Ipsum.
+			</p>
+		</div>
+		
+		<img alt="profile" src="" th:src="@{image/KetulPatel.jpg}"><br/>
+		
+		<button type="button" onclick="myFun('Ketul Patel')">Print Name</button><br/><br/>
+		<div id="print"></div>
+	</body>
+</html>
